@@ -1,23 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import CreateTodo from "./components/CreateTodo";
+import SearchTodo from "./components/SearchTodo";
+import Todos from "./components/Todos";
 
 function App() {
+  const [searchTitle, setSearchTitle] = useState("");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchTodo searchTitle={searchTitle} setSearchTitle={setSearchTitle} />
+      <CreateTodo />
+      <Todos searchTitle={searchTitle} />
     </div>
   );
 }

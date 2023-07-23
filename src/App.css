@@ -1,38 +1,117 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(270deg, rgb(36, 226, 36), rgb(250, 97, 123));
+  height: 100vh;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.search_app {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search_app input {
+  width: 500px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  caret-color: coral;
+  padding: 10px;
+  color: coral;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input::placeholder {
+  color: lightcoral;
+  font-size: 16px;
+}
+.todos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.filters {
+  display: flex;
+  gap: 50px;
+}
+.alert {
+  width: 300px;
+  height: 30px;
+  line-height: 30px;
+  padding: 20px;
+  background: white;
+  color: green;
+  border-radius: 20px;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.todo {
+  width: 400px;
+  padding: 10px;
+  border-radius: 10px;
+  background: white;
+  color: gray;
+  display: flex;
+  justify-content: space-between;
+}
+.todo button {
+  color: rgb(85, 231, 85);
+  background: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.todo input[type="text"] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  width: 80%;
+  color: rgb(85, 231, 85);
+}
+.load {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+}
+.create_todo_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.create_todo_container input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: 350px;
+  height: 30px;
+  font-size: 20px;
+  color: coral;
+}
+.create_todo_container button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.create_todo_container button:hover {
+  color: white;
+  background: linear-gradient(270deg, rgb(36, 226, 36), rgb(250, 97, 123));
+}
+button:hover {
+  color: pink;
 }
